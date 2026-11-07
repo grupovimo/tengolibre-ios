@@ -2,6 +2,8 @@
 # Pasa apps/ios del monorepo a este repo, commitea en los dos y empuja (compila en Actions).
 set -e
 M=~/Trabajo/vimo/tengolibre; R=~/Trabajo/vimo/tengolibre-ios; MSJ="$1"
+# La API simulada compartida con Android: una copia fresca en el paquete de pruebas.
+cp "$M/apps/pruebas/respuestas.json" "$M/apps/ios/TengoLibreTests/respuestas.json"
 rsync -a --delete --exclude .git --exclude publicar.sh "$M/apps/ios/" "$R/"
 PIE="
 
