@@ -4,6 +4,8 @@ set -e
 M=~/Trabajo/vimo/tengolibre; R=~/Trabajo/vimo/tengolibre-ios; MSJ="$1"
 # La API simulada compartida con Android: una copia fresca en el paquete de pruebas.
 cp "$M/apps/pruebas/respuestas.json" "$M/apps/ios/TengoLibreTests/respuestas.json"
+# Qué links abren la app (EnlacesTest): la misma lista que sirve la web.
+cp "$M/apps/pruebas/enlaces.json" "$M/apps/ios/TengoLibreTests/enlaces.json"
 rsync -a --delete --exclude .git --exclude publicar.sh "$M/apps/ios/" "$R/"
 PIE="
 
