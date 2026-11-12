@@ -10,7 +10,7 @@ rsync -a --delete --exclude .git --exclude publicar.sh "$M/apps/ios/" "$R/"
 PIE="
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_019W2t1Dnj9SQhEic6GchrAn"
+Claude-Session: https://claude.ai/code/session_019W2t1CYZ5z8M5mn5cAGkKF"
 cd "$M" && git add apps/ios && (git diff --cached --quiet || git commit -qm "iPhone: $MSJ$PIE") && git push -q origin main
 cd "$R" && git add -A && (git diff --cached --quiet || git commit -qm "$MSJ$PIE")
 T=$(gh auth token -u grupovimo)
